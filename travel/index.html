@@ -6,14 +6,18 @@
 <!--favicon to browser tab  https://www.8host.com/blog/kak-dobavit-favicon-sajta-v-html/  -->
 <!--    https://www.unisender.com/ru/blog/sovety/favikon-dlya-sajta-chto-ehto-takoe/#:~:text=Favicon%20%E2%80%94%20%D1%80%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B2%D0%BE%D0%B5%20%D0%B8%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B8%20%D0%B8%D0%B7%D0%BC%D0%B5%D1%80%D1%8F%D1%8E%D1%82,%2C%2032%D1%8532%2C%2064%D1%8564%20%D0%B8%20%D0%B1%D0%BE%D0%BB%D0%B5%D0%B5-->
     <link rel="shortcut icon" type="image/svg" href="./img/icons/logo.svg">
+<!--    <link href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,400;0,700;1,700&family=Red+Hat+Text:wght@500&display=swap" rel="stylesheet">-->
+    <link href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,400;0,700;1,400;1,700&family=Red+Hat+Text:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./sass/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-<header>
+<header class="header">
     <div class="wrapper header__wrapper">
         <div class="header__logo">
             <a href="#" class="logo">
-                <img src="./img/icons/logo.svg" alt="Logo">
-                <p class="logo__title">Travel Portal </p>
+                <img src="./img/icons/logo_full.svg" alt="Logo">
+<!--                <p class="logo__title">Travel Portal </p>-->
             </a>
         </div>
         <nav class="header__navigation">
@@ -30,37 +34,34 @@
 </header>
 <main>
     <section class="preview">
-        <div class="wrapper">
-            <div class="promo__content">
-                <h1 class="preview__title">Explore the beauty of the World</h1>
-                <p class="preview__text">Receive personalized recommendations for countries, hotels, activities and more</p>
-                <div class="preview__form">
-                    <form action="GET">
-                        <input type="text" name="question" placeholder="What would you like to do?">
-                        <div class="preview__button">
-                            <button type="submit" class="button">Start Planning</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
+        <div class="wrapper preview__wrapper">
+            <h1 class="preview__title">Explore the beauty of the World</h1>
+            <h4 class="preview__text">Receive personalized recommendations for countries, hotels, activities and more</h4>
+<!--            <div class="search-form">-->
+                <form action="GET" class="search-form">
+                    <input class="search-form__input" type="text" name="question" placeholder="What would you like to do?">
+                    <button class="button search-form__button" type="submit" >Start Planning</button>
+                </form>
+<!--            </div>-->
         </div>
     </section>
     <section class="steps">
         <div class="wrapper">
             <h2 class="steps__title">3 STEPS TO THE PERFECT TRIP</h2>
-            <div class="step">
-                <div class="step__icon">
-                    <span class="icon-square">
-                        <span class="icon"></span>
-                    </span>
-                </div>
-                <h4 class="step__title">Tell us what you want to do</h4>
-            </div>
-            <div class="layout-3-column">
+
+            <div class="step-container">
                 <div class="step">
                     <div class="step__icon">
                         <span class="icon-square">
-                            <span class="icon"></span>
+                            <span class="icon icon_bike"></span>
+                        </span>
+                    </div>
+                    <h4 class="step__title">Tell us what you want to do</h4>
+                </div>
+                <div class="step">
+                    <div class="step__icon">
+                        <span class="icon-square">
+                            <span class="icon icon_calendar"></span>
                         </span>
                     </div>
                     <h4 class="step__title">Share us preferable dates</h4>
@@ -68,7 +69,7 @@
                 <div class="step">
                     <div class="step__icon">
                         <span class="icon-square">
-                            <span class="icon"></span>
+                            <span class="icon icon_plane"></span>
                         </span>
                     </div>
                     <h4 class="step__title">We will give you recommendations</h4>
@@ -77,82 +78,121 @@
         </div>
     </section>
     <section class="destinations">
-        <div class="wrapper">
+<!--        <div class="wrapper">-->
             <h2 class="destinations__title">POPULAR DESTINATIONS</h2>
             <div class="destination__sliders">
                 <div class="destination-slider">
                     <img class="destination-slider__image" src="./img/destinations/rifs.png" alt="Spain">
-                    <h3 class="destination-slider__title">Spain</h3>
+                    <h3 class="destination-slider__title">SPAIN</h3>
                 </div>
                 <div class="destination-slider">
                     <img class="destination-slider__image" src="./img/destinations/arka.png" alt="Japan">
-                    <h3 class="destination-slider__title">Spain</h3>
+                    <h3 class="destination-slider__title">JAPAN</h3>
                 </div>
                 <div class="destination-slider">
                     <img class="destination-slider__image" src="./img/destinations/bridge.png" alt="USA">
-                    <h3 class="destination-slider__title">Spain</h3>
+                    <h3 class="destination-slider__title">USA</h3>
                 </div>
             </div>
 
             <div class="circles">
-                <span class="circle">o</span>
-                <span class="circle circle-active">o</span>
-                <span class="circle">o</span>
+                <span class="circle"></span>
+                <span class="circle circle_active"></span>
+                <span class="circle"></span>
             </div>
 
-            <button class="button">
+            <button class="button destinations__button">
                 <span class="icon icon_arrow"></span>
                 Find More
             </button>
-        </div>
+<!--        </div>-->
     </section>
     <section class="stories">
-        <div class="wrapper">
-            <h2>TRAVEL STORIES</h2>
+        <h2 class="stories__title">TRAVEL STORIES</h2>
+        <div class="stories__background">
+            <div class="stories__background_opacity">
+                <div class="wrapper stories__container">
+                    <article class="story">
+                        <img src="img/stories/canyon.png" alt="Thailand" class="story__image shadow-frame">
+                        <div class="story__description">
+                            <h3 class="story__title">10 Photos of Attractive Thailand</h3>
+                            <h4 class="story__content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                                aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                                deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit...
+                                <a href="" class="story__link">Read More</a></h4>
+                        </div>
+                    </article>
 
-            <article class="story shadow-frame">
-                <img src="img/stories/canyon.png" alt="Thailand" class="story__image">
-                <h3 class="story__title">10 Photos of Attractive Thailand</h3>
-                <p class="story__content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit...
-                    <a href="">Read More</a></p>
-            </article>
+                    <article class="story">
+                        <img src="img/stories/road.png" alt="Utah" class="story__image shadow-frame">
+                        <div class="story__description">
+                            <h3 class="story__title">Canyonlands National Park, Utah</h3>
+                            <h4 class="story__content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                                aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                                deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit...
+                                <a href="" class="story__link">Read More</a></h4>
+                        </div>
+                    </article>
 
-            <article class="story shadow-frame">
-                <img src="img/stories/road.png" alt="Utah" class="story__image">
-                <h3 class="story__title">Canyonlands National Park, Utah</h3>
-                <p class="story__content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit...
-                    <a href="">Read More</a></p>
-            </article>
+                    <article class="story">
+                        <img src="img/stories/mountains.png" alt="Mountains" class="story__image shadow-frame">
+                        <div class="story__description">
+                            <h3 class="story__title">I left my heart in the Mountains!</h3>
+                            <h4 class="story__content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                                aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                                deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit...
+                                <a href="" class="story__link">Read More</a></h4>
+                        </div>
+                    </article>
 
-            <article class="story shadow-frame">
-                <img src="img/stories/mountains.png" alt="Mountains" class="story__image">
-                <h3 class="story__title">I left my heart in the Mountains!</h3>
-                <p class="story__content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit...
-                    <a href="">Read More</a></p>
-            </article>
+                    <article class="story">
+                        <img src="img/stories/desert.png" alt="Desert" class="story__image shadow-frame">
+                        <div class="story__description">
+                            <h3 class="story__title">The Longest journey in my life!</h3>
+                            <h4 class="story__content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                                aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                                deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing
+                                elit...
+                                <a href="" class="story__link">Read More</a></h4>
+                        </div>
+                    </article>
+                    <button class="button stories__button">
+                        <span class="icon icon_arrow"></span>
+                        See More
+                    </button>
+                </div>
 
-            <article class="story shadow-frame">
-                <img src="img/stories/desert.png" alt="Desert" class="story__image">
-                <h3 class="story__title">The Longest journey in my life!</h3>
-                <p class="story__content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit...
-                    <a href="">Read More</a></p>
-            </article>
-
-            <button class="button">
-                <span class="icon icon_arrow"></span>
-                See More
-            </button>
+<!--                <a href="#" class="button stories__button">-->
+<!--                    <span class="icon icon_arrow"></span>-->
+<!--                    See More-->
+<!--                </a>-->
+            </div>
         </div>
     </section>
 
 </main>
-<footer>
+<footer class="footer">
     <div class="wrapper footer__wrapper">
         <h4 class="footer__title">All Rights Reserved © Travel Portal</h4>
-        <ul class="footer__navigation">
-            <li class="footer__navigation__item"><a href=""><span class="icon icon_insta"></span></a></li>
-            <li class="footer__navigation__item"><a href=""><span class="icon icon_youtube"></span></a></li>
-            <li class="footer__navigation__item"><a href=""><span class="icon icon_twitter"></span></a></li>
+        <ul class="footer-navigation">
+            <li class="footer-navigation__item"><a href=""><span class="icon icon_insta"></span></a></li>
+            <li class="footer-navigation__item"><a href=""><span class="icon icon_youtube"></span></a></li>
+            <li class="footer-navigation__item"><a href=""><span class="icon icon_twitter"></span></a></li>
         </ul>
     </div>
 </footer>

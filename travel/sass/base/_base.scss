@@ -1,0 +1,33 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  @extend %font-ALEO;
+  @include font($size: 2rem, $height: 2.4rem);
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+h1 {
+  @include font($size: 8rem, $height: 9.6rem, $weight: bold);
+  color: $color_white;
+}
+
+h2 {
+  @extend %font-RHT;
+  @include font ($size: 4rem, $height: 5.3rem, $weight: 500);
+  color: $color_headers;
+}
+
+h3 {
+  //@extend %font-headers;
+  @include font ($size: 3.5rem, $height: 4.2rem, $weight: 400);
+  color: $color_white;
+}
+
+h4 {
+  @extend %font-ALEO;
+  @include font ($size: 2rem, $height: 2.4rem, $weight: 400);
+  color: $color_darkblue;
+}

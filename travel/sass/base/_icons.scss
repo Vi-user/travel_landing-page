@@ -1,0 +1,59 @@
+.icon-square {
+  width: 10rem;
+  height: 10rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  background-color: $color_headers;
+}
+
+.icon_bike {
+  background-image: url('../img/icons/bike.svg');
+  width: 5rem;
+  height: 4.5rem;
+}
+
+.icon_calendar {
+  background-image: url('../img/icons/calendar.svg');
+  width: 5.2rem;
+  height: 5.2rem;
+}
+
+.icon_plane {
+  background-image: url('../img/icons/plane.svg');
+  width: 6rem;
+  height: 4.5rem;
+}
+
+.icon_arrow {
+  background-image: url('../img/icons/arrow.svg');
+  width: 3.5rem;
+  height: 2.2rem;
+  display: inline-flex;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+}
+
+.icon {
+  display: inline-flex;
+}
+
+.icon_insta {
+  background-image: url('../img/icons/insta.svg');
+  width: 3.2rem;
+  height: 3.1rem;
+}
+
+.icon_youtube {
+  background-image: url('../img/icons/youtube.svg');
+  width: 3.3rem;
+  height: 2.8rem;
+  //background-repeat: no-repeat;
+}
+
+.icon_twitter {
+  background-image: url('../img/icons/twitter.svg');
+  width: 3.1rem;
+  height: 2.6rem;
+}

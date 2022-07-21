@@ -1,0 +1,24 @@
+@import 'base/normalize';
+
+//abstract
+@import "abstract/constants";
+@import "abstract/mixins";
+@import "abstract/placeholders";
+
+//base
+@import "base/base";
+@import 'base/buttons';
+@import 'base/icons';
+@import 'base/burger';
+
+//components
+@import "components/navigation";
+@import "components/preview";
+@import "components/steps";
+@import "components/destinations";
+@import "components/stories";
+
+//layouts
+@import "layouts/wrapper";
+@import "layouts/header";
+@import "layouts/footer";

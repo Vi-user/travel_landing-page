@@ -1,0 +1,22 @@
+.footer {
+  margin-top: -65px;
+}
+
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 470px;
+  //padding: 13px 0 13px 470px;
+}
+
+.footer__title {
+  @extend %font-RHT;
+  @include font($size: 1.6rem, $height: 2.1rem, $weight: 500);
+  color: $color-white;
+}
+
+.footer-navigation {
+  display: flex;
+  column-gap: 24px;
+}

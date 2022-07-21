@@ -1,0 +1,9 @@
+.navigation {
+  display: flex;
+  @extend %font-RHT;
+  @include font($size: 1.6rem, $height: 2.1rem, $weight: 500);
+}
+
+.navigation__link {
+  padding: 0 2.1rem;
+}
